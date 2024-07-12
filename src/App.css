@@ -1,0 +1,231 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.start-header {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 84px;
+  font-style: oblique;
+}
+
+/*  Plant Section Styles*/
+.plant-cards {
+  display: flex;
+  flex-direction: row; /* place cards in rows first, not cols */
+  justify-content: center; /* space cards out along main axis (row or col)*/
+  flex-wrap: wrap; /* overflow elements to the next line, do not squish */
+  align-content: flex-start; /* start at top right of container */
+  /* align-content only avalible when flex-wrap: wrap */
+  gap: 1em; /* space between cards */
+
+
+  /*  */
+  /*  */
+  
+}
+
+/* Plant Card on main page styles */
+.plant-card {
+  border: 3px solid rgba(27, 63, 48, 0.87); /* Adjust border style, width, and color as desired */
+  padding: 10px; /* Add some padding inside the border */
+  border-radius: 5px; /* Add rounded corners (optional) */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); /* Add a subtle shadow (optional) */
+  /* margin: 15px; Add some margin outside the border */
+
+  /* have the image and text side by side */
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: center; /* center the image and the text vertically */
+  gap: 1em;
+  width: 305px;
+
+  /* flex-shrink: 0; do not shrink as page shrinks */
+  /* flex: {grow} {shrink} {basis} */
+
+  /* tags nested in plant card have these styles applied*/
+  & h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  & p {
+    text-align-last: justify; /* so text is on opposite sides of the line */
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  & a {
+    color: #8a3002;
+    text-decoration: underline;
+  }
+
+}
+
+/* make the image on plant card a certain shape! */
+.plant-card-img {
+  width: 120px; /* Set the size of the container */
+  height: 120px;
+  overflow: hidden; /* hide any overflow to ensure the circle shape */
+  border-radius: 50%; /* make the container a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* image covers the entire container without distorting its aspect ratio */
+
+}
+
+.plant-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensure the image covers the container */
+  border-radius: 50%; /* ensure the image itself is a circle */
+}
+
+/* The titles of each section*/
+.plant-location-section summary {
+  text-align: left;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+/* Plant Details Pages */
+
+.plant-detals-fullpg h2{
+  font-size: 48px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+ /* all content of plant details page */
+.plant-details {
+  /* so the items (harvest table) is centered within its div */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    font-size: 24px; /* Harvests title  */
+  }
+  
+
+}
+
+.details-info, .details-table {
+  padding: 1rem;
+}
+
+@media (min-width: 600px) {
+  .plant-details {
+    flex-direction: row;
+  }
+
+  .details-info, .details-table {
+    flex: 1; /* make both sections take up equal space */
+    border-right: 1px solid #172827; /* Add a vertical line separator */
+  } 
+
+  .details-table:last-child {
+    border-right: none;
+  }
+}
+
+
+.details-info p {
+  text-align-last:center; /* so text is on opposite sides of the line */
+}
+
+.plant-details-img {
+  width: 250px; /* Set the size of the container */
+  height: 250px;
+  overflow: hidden; /* Hide any overflow to ensure the circle shape */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* image covers the entire container without distorting its aspect ratio */
+
+  
+}
+
+.plant-details-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+
+}
+
+/* table in the details page */
+
+.details-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.harvest-table {
+  border-collapse: collapse;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  align-items: center;
+  align-self: center;
+
+}
+
+.harvest-table td, .harvest-table th {
+  border: 1px solid rgba(190, 190, 190, 0.10);
+  padding: 2px;
+}
+
+.harvest-table tr:nth-child(even){
+  background-color: rgba(206, 204, 204, 0.7);
+}
+
+.harvest-table tr:nth-child(odd){
+  background-color:rgba(254, 255, 232, 0.921);
+}
+
