@@ -14,7 +14,7 @@ interface HarvestDataModel { // type the harvest data should be
     Amount: string
 }
 
-const PlantDetails: React.FC<PlantModelProps> = ( {plant} ) => {
+const PlantDetails: React.FC<PlantModelProps> = () => {
 
     // hooks
     const { id } = useParams(); // Access plant ID from URL parameters
