@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite Plant Inventory
 
 
 class project, focus on css layouts and formating
